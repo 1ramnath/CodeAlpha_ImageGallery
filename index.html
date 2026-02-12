@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CodeAlpha Image Gallery</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>Responsive Image Gallery</h1>
+
+<!-- Filter Buttons -->
+<div class="filters">
+  <button onclick="filterImages('all')">All</button>
+  <button onclick="filterImages('nature')">Nature</button>
+  <button onclick="filterImages('city')">City</button>
+  <button onclick="filterImages('animals')">Animals</button>
+</div>
+
+<!-- Gallery -->
+<div class="gallery" id="gallery">
+  <img src="https://picsum.photos/400?1" data-category="nature" onclick="openLightbox(0)">
+  <img src="https://picsum.photos/400?2" data-category="city" onclick="openLightbox(1)">
+  <img src="https://picsum.photos/400?3" data-category="animals" onclick="openLightbox(2)">
+  <img src="https://picsum.photos/400?4" data-category="nature" onclick="openLightbox(3)">
+  <img src="https://picsum.photos/400?5" data-category="city" onclick="openLightbox(4)">
+  <img src="https://picsum.photos/400?6" data-category="animals" onclick="openLightbox(5)">
+</div>
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox">
+  <span class="close" onclick="closeLightbox()">×</span>
+  <button class="prev" onclick="changeImage(-1)">❮</button>
+  <img id="lightbox-img">
+  <button class="next" onclick="changeImage(1)">❯</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
